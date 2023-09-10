@@ -1,7 +1,9 @@
+import WeatherComponents from "../components";
+
 const Main = () => {
     return <>
     
-        h1
+        <WeatherComponents />
     
     </>;
 }

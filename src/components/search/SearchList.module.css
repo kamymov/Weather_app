@@ -1,0 +1,26 @@
+.main{
+    width: 70%;
+    height: 20vh;
+    margin: auto;
+    padding: 10px;
+}
+
+.search_input{
+    width: 75%;
+    outline: none;
+    margin: 2% auto;
+    border: none;
+    border-bottom: 1px solid white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: block;
+    background-color: rgba(240, 248, 255, 0);
+    color: white;
+
+}
+
+.search_input::placeholder{
+    color: white;
+}
