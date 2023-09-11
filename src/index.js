@@ -5,7 +5,7 @@ import App from './App';
 import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import allReducers from './components/Redux/reducers';
+import allReducers from './Redux/reducers';
 
 const store = configureStore({ reducer: allReducers });
 
