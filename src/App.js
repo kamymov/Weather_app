@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 import Main from './pages/main';
 import { useSelector } from 'react-redux';
-import Loading from './helpers/Loading/loading.layout';
+import Loading from './helpers/Layout/Loading/loading.layout';
 
 
 

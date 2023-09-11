@@ -1,11 +1,11 @@
-.main{
+.main {
     width: 70%;
     margin: auto;
     padding: 10px;
 }
 
-.status_div{
-    width: 200px;
+.status_div {
+    width: 300px;
     padding: 10px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.537);
@@ -14,8 +14,8 @@
     color: white;
 }
 
-.date_div{
-    width: 200px;
+.date_div {
+    width: 300px;
     padding: 10px;
     margin: 2% auto;
     background-color: rgba(0, 37, 50, 0.537);
@@ -24,8 +24,8 @@
     color: white;
 }
 
-.temp_div{
-    width: 200px;
+.temp_div {
+    width: 300px;
     padding: 10px;
     margin: 2% auto;
     background-color: rgba(0, 118, 160, 0.537);
@@ -33,4 +33,30 @@
     border-radius: 5px;
     color: white;
     direction: ltr;
+}
+
+@media screen and (max-width: 500px) {
+    .status_div {
+        width: 200px;
+    }
+
+    .status_div h3 {
+        font-size: medium;
+    }
+
+    .temp_div {
+        width: 200px;
+    }
+
+    .temp_div h3 {
+        font-size: medium;
+    }
+
+    .date_div {
+        width: 200px;
+    }
+
+    .date_div h3 {
+        font-size: medium;
+    }
 }

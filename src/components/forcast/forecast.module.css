@@ -1,7 +1,7 @@
 .forecast_div {
     width: 40%;
     margin: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.159);
     backdrop-filter: blur(10px);
     padding: 5px;
     border-radius: 10px;
@@ -11,6 +11,10 @@
 .forecast_title {
     display: block;
     margin-top: 10px;
+}
+
+.forecast_title span{
+    direction: rtl;
 }
 
 .forecast_div i {

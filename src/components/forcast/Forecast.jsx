@@ -3,9 +3,11 @@ import Styles from "./forecast.module.css";
 import { dayConvert } from "../../helpers/Convert/date.convert";
 import { ChangeTextWeather } from "../../helpers/weather/weather-status";
 import { WeahterIcon } from "../../helpers/icon/weather.icon";
+import { ChangeTempType } from "../../helpers/weather/change-weather";
 
 const Forecast = () => {
   const ForecastReducer = useSelector((state) => state.ForecastReducer);
+  const TempTypeReducer = useSelector((state) => state.TempTypeReducer)
 
   const weatherStatus = (data) => {
     const weatherStatus = ChangeTextWeather(data.day.condition.text);
@@ -17,11 +19,11 @@ const Forecast = () => {
   };
 
   const maxTemp = (data) => {
-    return `بالاترین دما : ${Math.round(data.day.maxtemp_c)}`;
+    return `بالاترین دما : ${ChangeTempType(TempTypeReducer, data.day.maxtemp_f, data.day.maxtemp_c)}`;
   };
 
   const minTemp = (data) => {
-    return `پایین ترین دما : ${Math.round(data.day.mintemp_c)}`;
+    return `پایین ترین دما : ${ChangeTempType(TempTypeReducer, data.day.mintemp_f, data.day.mintemp_c)}`;
   };
 
   const Icon = (data) => {
