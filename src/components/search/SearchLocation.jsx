@@ -5,18 +5,22 @@ import { Choose_location } from "../../Redux/action/Location.action";
 import sendRequest from "../../api/request.api";
 import { ApiKey, BaseUrl } from "../../configs/config";
 import Swal from "sweetalert2";
-import { Current_weather } from "../../Redux/action/current.action";
+import { Current_weather, None_Location } from "../../Redux/action/current.action";
 import {
   endLoadingAction,
   startLoadingAction,
 } from "../../Redux/action/Loading.action";
-import { Forecast_weather } from "../../Redux/action/forecast.action";
+import { Forecast_weather, None_Location_Forecast } from "../../Redux/action/forecast.action";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState();
   const dispatch = useDispatch();
 
   const searchLocation = async () => {
+    if (!location) {
+      dispatch(None_Location())
+      return dispatch(None_Location_Forecast());
+    }
     dispatch(Choose_location(location));
     dispatch(startLoadingAction());
     try {

@@ -10,8 +10,8 @@ export const ConvertDate = (date) => {
 }
 
 export const CheckDayOrNight = () => {
-    const d = new Date()
-    if (d.getHours() >= 18) {
+    const d = new Date();
+    if (d.getHours() >= 18 || d.getHours() <= 5) {
         return NightBackground;
     }
     return DayBackground;
@@ -32,7 +32,7 @@ export const dayConvert = (day) => {
             return 'جمعه';
         case 6:
             return 'شنبه';
-        case 7:
+        case 0:
             return 'یک شنبه';
         default:
             return '';

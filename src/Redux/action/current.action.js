@@ -4,3 +4,8 @@ export const Current_weather = (current_weather) => {
         payload: current_weather
     }
 }
+export const None_Location = () => {
+    return {
+        type: 'NONE_LOCATION',
+    }
+}

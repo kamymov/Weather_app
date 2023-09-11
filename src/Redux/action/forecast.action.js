@@ -4,3 +4,9 @@ export const Forecast_weather = (forecast_weather) => {
         payload: forecast_weather
     }
 }
+
+export const None_Location_Forecast = () => {
+    return {
+        type: 'NONE_LOCATION_FORECAST',
+    }
+}

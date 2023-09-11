@@ -3,6 +3,8 @@ const CurrentWeatherReducer = (state = null, action) => {
         case "CURRENT_WEATHER":
             state = action.payload;
             return state;
+        case "NONE_LOCATION":
+            return state = null;
         default:
             return state;
     }
