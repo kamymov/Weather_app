@@ -9,7 +9,16 @@ export const ConvertDate = (date) => {
     return `${day} ${d.jDate()} ${month}`;
 }
 
-const dayConvert = (day) => {
+export const CheckDayOrNight = () => {
+    const d = new Date()
+    if (d.getHours() >= 18) {
+        return NightBackground;
+    }
+    return DayBackground;
+
+}
+
+export const dayConvert = (day) => {
     switch (day) {
         case 1:
             return 'دوشنبه';
@@ -59,13 +68,4 @@ const monthConvert = (month) => {
         default:
             return ''
     }
-}
-
-export const CheckDayOrNight = () => {
-    const d = new Date()
-    if (d.getHours() >= 18) {
-        return NightBackground;
-    }
-    return DayBackground;
-
 }

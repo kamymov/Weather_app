@@ -1,0 +1,47 @@
+.settings_icon i {
+    font-family: "FontAwesome";
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    color: white;
+    display: block;
+}
+
+.settings_icon {
+    /* display: flex; */
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    direction: ltr;
+}
+
+
+
+.dropdown {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    transition: 2s;
+}
+
+.dropdown label {
+    margin-right: 10px;
+}
+
+.dropdown input[type="radio"] {
+    margin-right: 10px;
+}
+
+.settings_icon:hover .dropdown {
+    display: block;
+}
+
+.types{
+    display: block;
+}
+.types:last-child{
+    margin-top: 10px;
+}

@@ -10,6 +10,9 @@ import SunnyBackground from '../assets/background/Sunny.jpg';
 import OvercastBackground from '../assets/background/Overcast.jpg';
 import SnowBackground from "../assets/background/snow.jpeg"
 import { CheckDayOrNight } from "../helpers/Convert/date.convert";
+import MistBackground from "../assets/background/Mist.jpeg";
+import Forecast from "./forcast/Forecast.jsx";
+import ChangeTypeTemp from "./settings/ChangeTempType";
 
 
 const WeatherComponents = () => {
@@ -33,6 +36,8 @@ const WeatherComponents = () => {
                 return OvercastBackground
             case 'Partly cloudy':
                 return OvercastBackground
+            case "Mist":
+                return MistBackground;
             default:
                 return CheckDayOrNight();
         }
@@ -45,8 +50,10 @@ const WeatherComponents = () => {
                 backgroundImage: `url("${background()}")`
             }}
         >
+            <ChangeTypeTemp />
             <SearchLocation />
             <Current />
+            <Forecast />
         </div>
     );
 };

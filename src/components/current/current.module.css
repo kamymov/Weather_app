@@ -17,9 +17,20 @@
 .date_div{
     width: 200px;
     padding: 10px;
-    margin: 5% auto;
+    margin: 2% auto;
     background-color: rgba(0, 37, 50, 0.537);
     text-align: center;
     border-radius: 5px;
     color: white;
+}
+
+.temp_div{
+    width: 200px;
+    padding: 10px;
+    margin: 2% auto;
+    background-color: rgba(0, 118, 160, 0.537);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    direction: ltr;
 }
