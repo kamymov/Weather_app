@@ -1,0 +1,25 @@
+.main{
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+
+.status_div{
+    width: 200px;
+    padding: 10px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.537);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.date_div{
+    width: 200px;
+    padding: 10px;
+    margin: 5% auto;
+    background-color: rgba(0, 37, 50, 0.537);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+}

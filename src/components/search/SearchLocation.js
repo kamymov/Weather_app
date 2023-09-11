@@ -20,11 +20,11 @@ const SearchLocation = () => {
         try {
             const response = await sendRequest(`${BaseUrl}/v1/forecast.json?key=${ApiKey}&q=${location}&days=5`, 'GET');
             // current day weather
+            console.log(response.data.current);
             dispatch(Current_weather(response.data.current));
             // forecast days weather
             dispatch(Forecast_weather(response.data.forecast.forecastday))
         } catch (err) {
-            // this is must be error handling
             Swal.fire('', err.response.data.error.message, 'error')
         } finally {
             dispatch(endLoadingAction());
