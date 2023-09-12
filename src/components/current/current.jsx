@@ -36,6 +36,7 @@ const Current = () => {
         <div className={Styles.status_div}>
           <h3>
             {ChangeTextWeather(currentReducer?.condition?.text)}
+            {" "}
             <i className={WeahterIcon(currentReducer?.condition?.text)}></i>
           </h3>
         </div>

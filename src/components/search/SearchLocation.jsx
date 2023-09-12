@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Styles from "./SearchList.module.css";
 import { useDispatch } from "react-redux";
-import { Choose_location } from "../../Redux/action/Location.action";
 import sendRequest from "../../api/request.api";
 import { ApiKey, BaseUrl } from "../../configs/config";
 import {
@@ -28,7 +27,6 @@ const SearchLocation = () => {
       dispatch(None_Location());
       return dispatch(None_Location_Forecast());
     }
-    dispatch(Choose_location(location));
     dispatch(startLoadingAction());
     try {
       const response = await sendRequest(
