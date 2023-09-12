@@ -3,10 +3,11 @@ import DayBackground from '../../assets/background/Day.jpeg';
 import NightBackground from '../../assets/background/Night.jpeg';
 
 export const ConvertDate = (date) => {
+    const time = timeConvert(date);
     const d = moment(date);
     const day = dayConvert(d.day());
     const month = monthConvert(d.jMonth());
-    return `${day} ${d.jDate()} ${month}`;
+    return `${day} ${d.jDate()} ${month} ${time}`;
 }
 
 export const CheckDayOrNight = () => {
@@ -68,4 +69,11 @@ const monthConvert = (month) => {
         default:
             return ''
     }
+}
+
+export const timeConvert = (date) => {
+    const d = new Date(date);
+    const hours = d.getHours() < 10 ? `0${d.getHours()}` : `${d.getHours()}`;
+    const minutes = d.getMinutes() < 10 ? `0${d.getMinutes()}` : `${d.getMinutes()}`;
+    return `${hours}:${minutes}`;
 }

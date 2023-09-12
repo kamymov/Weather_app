@@ -39,7 +39,7 @@ const SearchLocation = () => {
       // forecast days weather
       dispatch(Forecast_weather(response.data.forecast.forecastday));
     } catch (err) {
-      ErrorHanldling(err.response);
+      ErrorHanldling(err);
     } finally {
       dispatch(endLoadingAction());
     }
