@@ -19,7 +19,7 @@ import {
 import { ErrorHanldling } from "../../api/Error/weather.error";
 
 const SearchLocation = () => {
-  const [location, setLocation] = useState();
+  const [location, setLocation] = useState("");
   const dispatch = useDispatch();
 
   const searchLocation = async () => {
