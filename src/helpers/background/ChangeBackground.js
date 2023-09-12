@@ -27,6 +27,6 @@ export const background = (currentReducer) => {
         case "Mist":
             return MistBackground;
         default:
-            return CheckDayOrNight();
+            return CheckDayOrNight(currentReducer?.last_updated);
     }
 }

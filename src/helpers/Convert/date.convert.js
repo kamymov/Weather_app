@@ -2,16 +2,16 @@ import moment from "moment-jalaali";
 import DayBackground from '../../assets/background/Day.jpeg';
 import NightBackground from '../../assets/background/Night.jpeg';
 
-export const ConvertDate = (date) => {
-    const time = timeConvert(date);
-    const d = moment(date);
+export const ConvertDate = (location_date) => {
+    const time = timeConvert(location_date);
+    const d = moment(location_date);
     const day = dayConvert(d.day());
     const month = monthConvert(d.jMonth());
     return `${day} ${d.jDate()} ${month} ${time}`;
 }
 
-export const CheckDayOrNight = () => {
-    const d = new Date();
+export const CheckDayOrNight = (location_date) => {
+    const d = location_date ? new Date(location_date) : new Date();
     if (d.getHours() >= 18 || d.getHours() <= 5) {
         return NightBackground;
     }

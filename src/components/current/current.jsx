@@ -11,7 +11,7 @@ const Current = () => {
   const TempTypeReducer = useSelector((state) => state.TempTypeReducer);
 
   const convertDate = () => {
-    return ConvertDate(new Date());
+    return ConvertDate(new Date(currentReducer.last_updated));
   };
 
   const TempType = () => {
