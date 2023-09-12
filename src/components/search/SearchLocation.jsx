@@ -3,7 +3,7 @@ import { useState } from "react";
 import Styles from "./SearchList.module.css";
 import { useDispatch } from "react-redux";
 import sendRequest from "../../api/request.api";
-import { ApiKey, BaseUrl } from "../../configs/config";
+import { ApiKey, BaseUrl } from "../../api/configs/config";
 import {
   Current_weather,
   None_Location,
