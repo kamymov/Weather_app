@@ -26,25 +26,25 @@ const ChangeTypeTemp = () => {
       <i className="fa fa-cog"></i>
       <div className={Styles.dropdown}>
         <div className={Styles.types}>
-          <label for="celsius">C</label>
+          <label htmlFor="celsius">C</label>
           <input
             type="radio"
             id="celsius"
             name="temp"
             value="C"
             checked={TempTypeReducer === "C" ? true : false}
-            onClick={changeTempType}
+            onChange={changeTempType}
           />
         </div>
         <div className={Styles.types}>
-          <label for="fahrenheit">F</label>
+          <label htmlFor="fahrenheit">F</label>
           <input
             type="radio"
             id="fahrenheit"
             name="temp"
             value="F"
             checked={TempTypeReducer === "F" ? true : false}
-            onClick={changeTempType}
+            onChange={changeTempType}
           />
         </div>
       </div>

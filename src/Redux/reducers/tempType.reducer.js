@@ -3,7 +3,6 @@ const TempTypeReducer = (state = 'C', action) => {
         case "FAHRENHEIT_TYPE":
             return state = 'F';
         case "CELSIUS_TYPE":
-            console.log('test');
             return state = 'C';
         default:
             return state;

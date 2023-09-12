@@ -1,16 +1,23 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState } from "react";
 import Styles from "./SearchList.module.css";
 import { useDispatch } from "react-redux";
 import { Choose_location } from "../../Redux/action/Location.action";
 import sendRequest from "../../api/request.api";
 import { ApiKey, BaseUrl } from "../../configs/config";
-import Swal from "sweetalert2";
-import { Current_weather, None_Location } from "../../Redux/action/current.action";
+import {
+  Current_weather,
+  None_Location,
+} from "../../Redux/action/current.action";
 import {
   endLoadingAction,
   startLoadingAction,
 } from "../../Redux/action/Loading.action";
-import { Forecast_weather, None_Location_Forecast } from "../../Redux/action/forecast.action";
+import {
+  Forecast_weather,
+  None_Location_Forecast,
+} from "../../Redux/action/forecast.action";
+import { ErrorHanldling } from "../../helpers/error/weather.error";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState();
@@ -18,7 +25,7 @@ const SearchLocation = () => {
 
   const searchLocation = async () => {
     if (!location) {
-      dispatch(None_Location())
+      dispatch(None_Location());
       return dispatch(None_Location_Forecast());
     }
     dispatch(Choose_location(location));
@@ -30,13 +37,11 @@ const SearchLocation = () => {
       );
       // current day weather
       response.data.forecast.forecastday.shift();
-      console.log(response.data.forecast.forecastday);
-      console.log(response.data.current);
       dispatch(Current_weather(response.data.current));
       // forecast days weather
       dispatch(Forecast_weather(response.data.forecast.forecastday));
     } catch (err) {
-      Swal.fire("", err.response.data.error.message, "error");
+      ErrorHanldling(err.response);
     } finally {
       dispatch(endLoadingAction());
     }
