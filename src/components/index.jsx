@@ -1,11 +1,11 @@
-import SearchLocation from "./search/SearchLocation";
+import SearchLocation from "./Search/SearchLocation";
 import Styles from "./index.module.css";
-import Current from "./current/current";
+import Current from "./Current/Current";
 import { useSelector } from "react-redux";
 
-import ChangeTypeTemp from "./settings/ChangeTempType";
-import { background } from "../helpers/background/ChangeBackground";
-import Forecast from "./forcast/Forecast.jsx";
+import ChangeTypeTemp from "./Settings/ChangeTempType";
+import { background } from "../helpers/Background/changeBackground";
+import Forecast from "./Forcast/Forecast.jsx";
 import NoneData from "../helpers/Layout/none-data/nonedata.layout";
 
 const WeatherComponents = () => {

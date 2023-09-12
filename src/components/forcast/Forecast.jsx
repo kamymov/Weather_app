@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import Styles from "./forecast.module.css";
 import { dayConvert } from "../../helpers/Convert/date.convert";
-import { ChangeTextWeather } from "../../helpers/weather/weather-status";
-import { WeahterIcon } from "../../helpers/icon/weather.icon";
-import { ChangeTempType } from "../../helpers/weather/change-weather";
+import { ChangeTextWeather } from "../../helpers/Weather/weather-status";
+import { WeahterIcon } from "../../helpers/Icon/weather.icon";
+import { ChangeTempType } from "../../helpers/Weather/change-weather";
 
 const Forecast = () => {
   const ForecastReducer = useSelector((state) => state.ForecastReducer);

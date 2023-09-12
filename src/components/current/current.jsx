@@ -2,9 +2,9 @@
 import { useSelector } from "react-redux";
 import Styles from "./current.module.css";
 import { ConvertDate } from "../../helpers/Convert/date.convert";
-import { WeahterIcon } from "../../helpers/icon/weather.icon";
-import { ChangeTextWeather } from "../../helpers/weather/weather-status";
-import { ChangeTempType } from "../../helpers/weather/change-weather";
+import { WeahterIcon } from "../../helpers/Icon/weather.icon";
+import { ChangeTextWeather } from "../../helpers/Weather/weather-status";
+import { ChangeTempType } from "../../helpers/Weather/change-weather";
 
 const Current = () => {
   const currentReducer = useSelector((state) => state.CurrentWeatherReducer);

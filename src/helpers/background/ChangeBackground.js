@@ -3,7 +3,7 @@ import RainyBackground from "../../assets/background/Rainy.jpg"
 import SunnyBackground from '../../assets/background/Sunny.jpg';
 import OvercastBackground from '../../assets/background/Overcast.jpg';
 import SnowBackground from "../../assets/background/snow.jpeg"
-import { CheckDayOrNight } from "../../helpers/Convert/date.convert";
+import { CheckDayOrNight } from "../Convert/date.convert";
 import MistBackground from "../../assets/background/Mist.jpeg";
 
 

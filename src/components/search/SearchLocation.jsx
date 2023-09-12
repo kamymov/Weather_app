@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState } from "react";
-import Styles from "./SearchList.module.css";
+import Styles from "./searchList.module.css";
 import { useDispatch } from "react-redux";
 import sendRequest from "../../api/request.api";
 import { ApiKey, BaseUrl } from "../../api/configs/config";
@@ -16,7 +16,7 @@ import {
   Forecast_weather,
   None_Location_Forecast,
 } from "../../Redux/action/forecast.action";
-import { ErrorHanldling } from "../../helpers/error/weather.error";
+import { ErrorHanldling } from "../../api/Error/weather.error";
 
 const SearchLocation = () => {
   const [location, setLocation] = useState();
