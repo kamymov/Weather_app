@@ -11,7 +11,7 @@ import {
 import {
   endLoadingAction,
   startLoadingAction,
-} from "../../Redux/action/Loading.action";
+} from "../../Redux/action/loading.action";
 import {
   Forecast_weather,
   None_Location_Forecast,
